@@ -3,6 +3,7 @@ package com.shawn.wanandroid.http
 import com.shawn.wanandroid.api.ApiService
 import com.shawn.wanandroid.app.App
 import com.shawn.wanandroid.common.Contanst
+import com.shawn.wanandroid.utils.PreferenceUtil
 import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -24,7 +25,7 @@ object NetManager {
 
     val service: ApiService by lazy { getRetrofit()!!.create(ApiService::class.java) }
 
-    private var token: String? = null
+    private var token: String by PreferenceUtil("token", "")
 
     private fun getRetrofit(): Retrofit? {
         if (mRetrofit == null) {
