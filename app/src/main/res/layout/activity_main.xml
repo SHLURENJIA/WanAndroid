@@ -24,11 +24,22 @@
             android:layout_alignParentBottom="true"
             android:layout_gravity="bottom"
             android:background="@color/viewBackground"
-            app:elevation="16dp"
+            app:elevation="@dimen/dp_16"
             app:itemIconTint="@drawable/nav_item_color_state"
             app:itemTextColor="@drawable/nav_item_color_state"
-            app:layout_behavior="com.cxz.wanandroid.widget.behavior.BottomNavigationBehavior"
+            app:layout_behavior="com.shawn.wanandroid.widget.behavior.BottomNavigationBehavior"
             app:menu="@menu/bottom_navigation_main" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floating_action_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_60"
+            app:layout_behavior="com.shawn.wanandroid.widget.behavior.ScaleDownShowBehavior"
+            app:srcCompat="@drawable/ic_arrow_upward_white_24dp" />
 
     </android.support.design.widget.CoordinatorLayout>
 
@@ -37,8 +48,11 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="@color/viewBackground"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
+        app:itemIconTint="@color/item_nav_color_tv"
+        app:itemTextColor="@color/item_nav_color_tv"
         app:menu="@menu/nav_menu" />
 
 </android.support.v4.widget.DrawerLayout>

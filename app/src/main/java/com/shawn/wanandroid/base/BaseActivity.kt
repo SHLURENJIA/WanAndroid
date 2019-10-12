@@ -32,8 +32,6 @@ abstract class BaseActivity : AppCompatActivity() {
      */
     protected abstract fun initData()
 
-    protected abstract fun initListener()
-
     open fun useEventBus(): Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
@@ -45,7 +43,6 @@ abstract class BaseActivity : AppCompatActivity() {
         }
         initView()
         initData()
-        initListener()
     }
 
     override fun onDestroy() {
