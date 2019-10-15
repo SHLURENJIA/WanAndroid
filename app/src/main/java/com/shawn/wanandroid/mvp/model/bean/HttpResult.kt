@@ -13,6 +13,7 @@ data class HttpResult<T>(
     val data: T
 ) : BaseBean()
 
+
 /**
  * 首页文章列表
  */
@@ -119,5 +120,115 @@ data class Banner(
     val type: Int,
     @SerializedName("url")
     val url: String
+)
+
+data class HotKey(
+    @SerializedName("id") val id: Int,
+    @SerializedName("link") val link: String,
+    @SerializedName("name") val name: String,
+    @SerializedName("order") val order: Int,
+    @SerializedName("visible") val visible: Int
+)
+
+//常用网站
+data class Friend(
+    @SerializedName("icon") val icon: String,
+    @SerializedName("id") val id: Int,
+    @SerializedName("link") val link: String,
+    @SerializedName("name") val name: String,
+    @SerializedName("order") val order: Int,
+    @SerializedName("visible") val visible: Int
+)
+
+//知识体系
+data class KnowledgeTreeBody(
+    @SerializedName("children") val children: MutableList<Knowledge>,
+    @SerializedName("courseId") val courseId: Int,
+    @SerializedName("id") val id: Int,
+    @SerializedName("name") val name: String,
+    @SerializedName("order") val order: Int,
+    @SerializedName("parentChapterId") val parentChapterId: Int,
+    @SerializedName("visible") val visible: Int
+)
+
+data class Knowledge(
+    @SerializedName("children") val children: List<Any>,
+    @SerializedName("courseId") val courseId: Int,
+    @SerializedName("id") val id: Int,
+    @SerializedName("name") val name: String,
+    @SerializedName("order") val order: Int,
+    @SerializedName("parentChapterId") val parentChapterId: Int,
+    @SerializedName("visible") val visible: Int
+)
+
+// 登录数据
+data class LoginData(
+    @SerializedName("collectIds") val collectIds: List<Any>,
+    @SerializedName("email") val email: String,
+    @SerializedName("icon") val icon: String,
+    @SerializedName("id") val id: Int,
+    @SerializedName("password") val password: String,
+    @SerializedName("type") val type: Int,
+    @SerializedName("username") val username: String
+)
+
+//收藏网站
+data class CollectionWebsite(
+    @SerializedName("desc") val desc: String,
+    @SerializedName("icon") val icon: String,
+    @SerializedName("id") val id: Int,
+    @SerializedName("link") var link: String,
+    @SerializedName("name") var name: String,
+    @SerializedName("order") val order: Int,
+    @SerializedName("userId") val userId: Int,
+    @SerializedName("visible") val visible: Int
+)
+
+
+data class CollectionResponseBody<T>(
+    @SerializedName("curPage") val curPage: Int,
+    @SerializedName("datas") val datas: List<T>,
+    @SerializedName("offset") val offset: Int,
+    @SerializedName("over") val over: Boolean,
+    @SerializedName("pageCount") val pageCount: Int,
+    @SerializedName("size") val size: Int,
+    @SerializedName("total") val total: Int
+)
+
+data class CollectionArticle(
+    @SerializedName("author") val author: String,
+    @SerializedName("chapterId") val chapterId: Int,
+    @SerializedName("chapterName") val chapterName: String,
+    @SerializedName("courseId") val courseId: Int,
+    @SerializedName("desc") val desc: String,
+    @SerializedName("envelopePic") val envelopePic: String,
+    @SerializedName("id") val id: Int,
+    @SerializedName("link") val link: String,
+    @SerializedName("niceDate") val niceDate: String,
+    @SerializedName("origin") val origin: String,
+    @SerializedName("originId") val originId: Int,
+    @SerializedName("publishTime") val publishTime: Long,
+    @SerializedName("title") val title: String,
+    @SerializedName("userId") val userId: Int,
+    @SerializedName("visible") val visible: Int,
+    @SerializedName("zan") val zan: Int
+)
+
+// 导航
+data class NavigationBean(
+    val articles: MutableList<Article>,
+    val cid: Int,
+    val name: String
+)
+
+// 项目
+data class ProjectTreeBean(
+    @SerializedName("children") val children: List<Any>,
+    @SerializedName("courseId") val courseId: Int,
+    @SerializedName("id") val id: Int,
+    @SerializedName("name") val name: String,
+    @SerializedName("order") val order: Int,
+    @SerializedName("parentChapterId") val parentChapterId: Int,
+    @SerializedName("visible") val visible: Int
 )
 

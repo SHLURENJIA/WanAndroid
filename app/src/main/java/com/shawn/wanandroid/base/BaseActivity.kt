@@ -3,8 +3,8 @@ package com.shawn.wanandroid.base
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.os.PersistableBundle
-import android.support.annotation.LayoutRes
-import android.support.v7.app.AppCompatActivity
+import androidx.annotation.LayoutRes
+import androidx.appcompat.app.AppCompatActivity
 import org.greenrobot.eventbus.EventBus
 
 /**

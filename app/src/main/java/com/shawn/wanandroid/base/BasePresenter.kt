@@ -2,6 +2,9 @@ package com.shawn.wanandroid.base
 
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.disposables.Disposable
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 
 /**
  * 作者：create by @author{ YSH } on 2019/10/10
@@ -15,6 +18,9 @@ open class BasePresenter<V : IView> : IPresenter<V> {
 
     private var compositeDisposable = CompositeDisposable()
 
+    protected val mPresenterScope: CoroutineScope by lazy {
+        CoroutineScope(Dispatchers.Main + Job())
+    }
 
     override fun attachView(mRootView: V) {
         this.mRootView = mRootView

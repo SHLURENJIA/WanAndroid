@@ -1,9 +1,9 @@
 package com.shawn.wanandroid.widget.behavior
 
 import android.animation.ObjectAnimator
-import android.support.design.widget.CoordinatorLayout
-import android.support.v4.view.ViewCompat
 import android.view.View
+import androidx.coordinatorlayout.widget.CoordinatorLayout
+import androidx.core.view.ViewCompat
 
 /**
  * 作者：create by @author{ YSH } on 2019/10/12

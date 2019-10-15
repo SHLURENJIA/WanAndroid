@@ -1,12 +1,12 @@
 package com.shawn.wanandroid.ui.activity
 
 import android.os.Build
-import android.support.design.widget.BottomNavigationView
-import android.support.design.widget.NavigationView
-import android.support.v4.app.FragmentTransaction
-import android.support.v4.view.GravityCompat
-import android.support.v7.app.ActionBarDrawerToggle
 import android.view.WindowManager
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.view.GravityCompat
+import androidx.fragment.app.FragmentTransaction
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
 import com.shawn.wanandroid.R
 import com.shawn.wanandroid.base.BaseActivity
 import com.shawn.wanandroid.ui.fragment.HomeFragment

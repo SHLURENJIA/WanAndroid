@@ -2,11 +2,11 @@ package com.shawn.wanandroid.widget.behavior
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.support.design.widget.CoordinatorLayout
-import android.support.design.widget.FloatingActionButton
-import android.support.v4.view.ViewCompat
 import android.util.AttributeSet
 import android.view.View
+import androidx.coordinatorlayout.widget.CoordinatorLayout
+import androidx.core.view.ViewCompat
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 /**
  * 作者：create by @author{ YSH } on 2019/10/12
